@@ -1,0 +1,18 @@
+Tema 2 - IOCLA
+Andrei Gabriel 313CB
+
+    -rotp : Am parcurs vectorii plain si ciphertext crescator, iar key descrescator(plecand de la adresa
+    ultimului element) cu un iterator, in cazul nostru ecx (care merge de la len-1 la 0) si l-am calculat
+    pe ciphertext dupa formula data.
+
+    -ages: Se parcurg toate datile(in loop), daca anul curent >= anul dat, se pune diferenta acestora in
+    vectorul de varsta, daca nu => varsta 0. La final, se testeaza in functie de luna/ziua in care s-a nascut
+    daca se scade sau nu 1 din varste(nu a implinit inca varsta calculat anterior)
+
+    -columnar: Am parcurs matricea plaintext pe coloane, vectorul key dand ordinea coloanelor si am inserat elementele
+    in vectorul rezultat(ciphertext construit cu ajutorului contorului ecx).
+
+    -cache: Se extrage offest-ul din adresa cu ajutorul unei masti, se shifteaza adresa la dreapta de 3 ori rezultand tagul
+    Urmeaza cautarea tagului in vectorul de taguri, daca gaseste tagul sare peste cache_miss. In cache_miss se insereaza tagul
+    in tags, se insereaza octetii de la adresele specificate in enunt.
+    La final am cautat in matricea cache elementul cu offsetul dat si l-am inserat in registru 
